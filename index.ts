@@ -20,6 +20,23 @@ export default function (pi: ExtensionAPI) {
 		api: "openai-completions",
 		models: [
 			{
+				id: "glm-5.2",
+				name: "GLM-5.2",
+				reasoning: true,
+				thinkingLevelMap: {
+					off: null,
+					minimal: null,
+					low: null,
+					medium: null,
+					high: "high",
+					xhigh: "max",
+				},
+				input: ["text"],
+				cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
+				contextWindow: 1000000,
+				maxTokens: 131072,
+			},
+			{
 				id: "glm-5.1",
 				name: "GLM-5.1",
 				reasoning: true,

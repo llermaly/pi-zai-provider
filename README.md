@@ -6,6 +6,7 @@ Z.AI (GLM models) provider extension for the [pi coding agent](https://github.co
 
 | Model | Context | Max Output | Input $/MTok | Output $/MTok |
 |---|---|---|---|---|
+| GLM-5.2 | 1M | 131K | TBD | TBD |
 | GLM-5.1 | 200K | 128K | $1.00 | $3.20 |
 | GLM-5 | 200K | 128K | $1.00 | $3.20 |
 | GLM-5 Turbo | 200K | 128K | $1.20 | $4.00 |
@@ -52,4 +53,6 @@ Switch to a Z.AI model:
 
 - Uses the coding-specific endpoint (`api.z.ai/api/coding/paas/v4`) for plan quota consumption
 - Pi has native Z.AI compat built-in: `enable_thinking` param, `reasoning_content` streaming, and correct compat flags auto-detected from the `api.z.ai` URL
+- GLM-5.2 uses a 1M context window and 131K max output per Z.AI's latest model documentation
+- GLM-5.2 supports High and Max thinking-effort levels. This provider maps Pi `high` to Z.AI `high` and Pi `xhigh` to Z.AI `max`; use `xhigh`/Max for coding tasks for deeper reasoning and more reliable performance.
 - GLM-5.1 is available on all GLM Coding Plan tiers; GLM-5 requires Pro or Max
